@@ -7,6 +7,7 @@ numbers2stripes_js="""
 		var ones=Math.floor(n % 10);
 		return "█".repeat(thousands)+"▓".repeat(hundreds)+"▒".repeat(tens)+"░".repeat(ones);
 	}
+	$(".stripecontainer").remove()
 	$(".new-count").each(function(){
 		$(this).after(" <span class='stripecontainer new-count'    style='font-family: Noto Sans CJK SC;'>"+number2stripes(this.innerText)+"</span>");
 	});
